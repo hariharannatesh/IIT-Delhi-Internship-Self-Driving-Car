@@ -1,2 +1,2 @@
 # IIT-Delhi-Internship-Self-Driving-Car
-The project is about developing a self driving car using computer vision.
+The project is about developing a self driving car using computer vision. Zed stereo camera is used to take images of road as input. Lane detection is done using canny edge detection and by using Hough line transform and tracking using Kalman Filter. The angle by which the steering has to be rotated is calculated from the lanes detected in the frame. The car needs to be in the centre of the road and the steering is rotated till this condition is achieved. The data is fed to the steering using CAN architecture. By using PID control, the steering is controlled and moved to the desired angle.
