@@ -1,0 +1,12 @@
+<launch>
+	<arg name="joy_dev" default="/dev/input/js0" />
+	
+	<node name="pcan_nav" pkg="pcan" type="NAV_CAN_final_01.04_edited.py"/>
+	<node name="joystick_controller" pkg="driverless_car" type="lane_steering.py" output="screen" />
+	<node name="pid_controller" pkg="pid" type="controller_joy" output="screen">
+	<node name ="steering" pkg="pid" type="PID_Steering.py">
+	  <param name="Kp" value="3.2" />
+	  <param name="Ki" value="1.2" />
+	  <param name="Kd" value="1.2" />
+	</node>
+</launch>
